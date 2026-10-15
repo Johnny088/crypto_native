@@ -5,7 +5,6 @@ import { Text, View, StyleSheet, FlatList } from 'react-native';
 export default function Index() {
   const [data, setData] = useState<Coin[]>([]);
   useEffect(() => {
-    console.log(' useEffect');
     getData().then((data) => setData(data));
   }, []);
   return (
@@ -63,7 +62,7 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   coinPrice: {
-    color: '#38bdf8', // Неоновий блакитний для ціни
+    color: '#38bdf8',
     fontSize: 16,
     fontWeight: 'bold',
   },
